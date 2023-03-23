@@ -48,3 +48,21 @@ CREATE TABLE spells (
   	tipo VARCHAR(45) not NULL,
   	FOREIGN KEY (nome_spell) REFERENCES items (nome) on DELETE CASCADE on UPDATE CASCADE
 );
+
+CREATE TABLE armor(
+  	nome_armor VARCHAR(40) not null unique,
+	weight int not NULL,
+  	durability int not NULL,
+  	poise int NOT NULL,
+  	bleed_res NOT NULL,
+  	poison_res NOT NULL,
+  	curse_res NOT NULL,
+  	regular_defense NOT NULL,
+  	strike_defense NOT NULL,
+  	slash_defense NOT NULL,
+  	thrust_defense NOT NULL,
+ 	magic_defense NOT NULL,
+  	fire_defense NOT NULL,
+  	ligthning_defense NOT NULL,
+  	FOREIGN KEY (nome_armor) REFERENCES items (nome) 
+  );
